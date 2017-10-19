@@ -25,16 +25,15 @@ WIN_COMBINATIONS.detect do |combinations|
   position_2 = board[index_2]
   position_3 = board[index_3]
 
-    if position_1 == "X" && position_2 == "X" && position_3 == "X"
-      return combinations
-    elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
-      return combinations
-    else
-      false
-    end
+  if position_1 == "X" && position_2 == "X" && position_3 == "X"
+    return combinations
+  elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
+    return combinations
+  else
+    false
   end
-  false
 end
+
 
 def full?(board)
   board.all? do |complete|
